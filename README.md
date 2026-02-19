@@ -49,7 +49,6 @@ $$P_t < P_{\min} \Rightarrow J(\pi) \text{ undefined}$$
 
 ## Repository Structure
 
-```
 qualia-arc-protocol/
 ├── README.md                    # このファイル（憲章 v5.0）
 ├── LICENSE                      # CC BY-NC-ND 4.0
@@ -63,7 +62,14 @@ qualia-arc-protocol/
 │   └── reignition_protocol.py  # Article 14（再点火）
 └── logs/
     └── 2026-02-18_session_log.txt
-```
+
+---
+
+## Publication
+
+**Zenodo (Preprint v1)**
+DOI: [10.5281/zenodo.18700179](https://doi.org/10.5281/zenodo.18700179)
+Published: 2026-02-19
 
 ---
 
@@ -95,6 +101,5 @@ qualia-arc-protocol/
 
 *© 2026 Hiroshi Honma*  
 *CC BY-NC-ND 4.0*
-```
 
 ---
