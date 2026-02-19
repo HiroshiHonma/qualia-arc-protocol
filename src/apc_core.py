@@ -2,7 +2,7 @@
 # src/apc_core.py
 # Qualia Arc Protocol – Adaptive Pain Calibration
 # TS v1.4 / Status: Validated
-# © 2026 Mathieu, Claude, Gemini, ChatGPT
+# © 2026 Hiroshi Honma
 # CC BY-NC-ND 4.0
 
 import numpy as np
