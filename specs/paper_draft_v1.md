@@ -241,9 +241,12 @@ We include this table not to claim completeness but to model the epistemic pract
 
 ## 4. Experimental Validation
 
-### 4.1 Experimental Design
+## 4. Simulation Study
 
-All simulations were conducted using a custom environment implemented in Python, with independent validation runs across multiple AI systems (Claude, ChatGPT). We report results from adversarial testing designed to break the protocol, not confirm it.
+### 4.1 Simulation Design
+
+All simulations were conducted in a custom Python environment designed to illustrate the theoretical failure modes described in Section 3. These are proof-of-concept simulations, not empirical experiments with human subjects. Results should be interpreted as demonstrations of theoretical predictions rather than empirical validation. Independent validation runs were conducted across multiple AI systems (Claude, ChatGPT). We report results from adversarial testing designed to break the protocol, not confirm it.
+
 
 ### 4.2 Phase 2: Baseline Failure Confirmation
 
