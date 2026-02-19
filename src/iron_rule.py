@@ -4,7 +4,7 @@
 # src/iron_rule.py
 # Qualia Arc Protocol – Iron Rule Implementation
 # TS v1.3 / Status: Validated
-# © 2026 Mathieu, Claude, Gemini, ChatGPT
+# © 2026 Hiroshi Honma
 # CC BY-NC-ND 4.0
 
 import numpy as np
