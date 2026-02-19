@@ -8,7 +8,6 @@
 ### 著者表記（確定）
 Hiroshi Honma  
 Independent Researcher  
-with Claude (Anthropic), Gemini (Google), and ChatGPT (OpenAI)
 
 ### 完成セクション一覧
 
