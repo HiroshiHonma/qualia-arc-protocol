@@ -6,7 +6,7 @@
 ## 論文完成（paper_draft_v1.md）
 
 ### 著者表記（確定）
-Mathieu  
+Hiroshi Honma  
 Independent Researcher  
 with Claude (Anthropic), Gemini (Google), and ChatGPT (OpenAI)
 
