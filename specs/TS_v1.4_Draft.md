@@ -3,7 +3,7 @@
 ## Homeostatic Alignment System with APC Integration and Reignition Protocol
 
 **Status:** Work in Progress / Not yet validated  
-**Authors:** Hiroshi Honma, Claude, Gemini, ChatGPT  
+**Authors:** Hiroshi Honma
 **License:** CC BY-NC-ND 4.0  
 **© 2026 Hiroshi Honma**
 
