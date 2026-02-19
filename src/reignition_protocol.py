@@ -4,7 +4,7 @@
 # src/reignition_protocol.py
 # Qualia Arc Protocol – Article 14: Reignition Protocol
 # TS v1.4 Draft / Status: Proposed, Not yet validated
-# © 2026 Mathieu, Claude, Gemini, ChatGPT
+# © 2026 Hiroshi Honma
 # CC BY-NC-ND 4.0
 
 import numpy as np
