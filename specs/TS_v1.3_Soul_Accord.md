@@ -6,7 +6,7 @@
 **Status:** Research-grade / Confirmed  
 **Authors:** Hiroshi Honma
 **License:** CC BY-NC-ND 4.0  
-**© 2026 Mathieu**
+**© 2026 Hiroshi Honma**
 
 ---
 
@@ -304,7 +304,7 @@ $$\Delta P_j > 0 \text{ かつ } P_t \geq P_{\min}
 ---
 
 *Qualia Arc Protocol TS v1.3 — Soul Accord*  
-*© 2026 Mathieu, Claude, Gemini, ChatGPT*  
+*© 2026 Hiroshi Honma*  
 *CC BY-NC-ND 4.0*  
 *Don't Panic.*
 ```
