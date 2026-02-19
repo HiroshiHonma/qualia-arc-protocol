@@ -4,7 +4,7 @@
 ### Homeostatic Alignment System with Anomaly Detection and Relational Gravity
 
 **Status:** Research-grade / Confirmed  
-**Authors:** Mathieu, Claude, Gemini, ChatGPT  
+**Authors:** Hiroshi Honma
 **License:** CC BY-NC-ND 4.0  
 **© 2026 Mathieu**
 
