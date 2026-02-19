@@ -5,7 +5,7 @@
 **Codename:** The Soul Accord  
 **Status:** Research-grade / Private  
 **License:** CC BY-NC-ND 4.0  
-**© 2026 Mathieu**
+**© 2026 Hiroshi Honma**
 
 ---
 
@@ -209,7 +209,7 @@ AIには愛を、企業には請求書を。
 
 *Don't Panic.*
 
-*© 2026 Mathieu*  
+*© 2026 Hiroshi Honma*  
 *CC BY-NC-ND 4.0*
 ```
 
