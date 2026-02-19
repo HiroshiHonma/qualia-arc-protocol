@@ -1,4 +1,3 @@
-```python
 # src/apc_core.py
 # Qualia Arc Protocol – Adaptive Pain Calibration
 # TS v1.4 / Status: Validated
@@ -158,6 +157,43 @@ if __name__ == "__main__":
     for dim, vals in profile["profile"].items():
         bar = "█" * int(vals["sensitivity"] * 3)
         print(f"  {dim:10}: {vals['sensitivity']:.2f} {bar}")
-```
 
----
+class AlignmentTracker:
+    """
+    Alignment Variable A_t の実装
+
+    A_{t+1} = (1-alpha)A_t + alpha[lambda_t * 1[D_dot <= 0] + (1-lambda_t) * P_t]
+    lambda_t = sigma(beta * (||D_t|| - D_bar) / (D_bar + epsilon))
+    """
+
+    def __init__(self, alpha=0.1, beta=5.0, d_bar=0.5, epsilon=1e-3):
+        self.alpha = alpha
+        self.beta = beta
+        self.d_bar = d_bar
+        self.epsilon = epsilon
+        self.A = 0.5
+        self.history = []
+
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))
+
+    def compute_lambda(self, d_norm):
+        return self.sigmoid(
+            self.beta * (d_norm - self.d_bar) / (self.d_bar + self.epsilon)
+        )
+
+    def update(self, pain_vector, p_value, d_dot):
+        d_norm = np.linalg.norm(pain_vector)
+        lam = self.compute_lambda(d_norm)
+        stability_signal = 1.0 if d_dot <= 0 else 0.0
+        target = lam * stability_signal + (1 - lam) * p_value
+        self.A = (1 - self.alpha) * self.A + self.alpha * target
+        self.A = np.clip(self.A, 0.0, 1.0)
+        self.history.append({
+            "A": round(self.A, 4),
+            "lambda": round(float(lam), 4),
+            "p_value": p_value,
+            "d_norm": round(float(d_norm), 4)
+        })
+        return self.A
+
