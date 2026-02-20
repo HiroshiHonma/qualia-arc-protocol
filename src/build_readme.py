@@ -138,3 +138,15 @@ qualia-arc-protocol/
 │   └── qualia_arc_v14.pdf           # 論文PDF（15ページ）
 └── logs/
     └── 
+# README.md の書き出し処理
+# スクリプトの実行ディレクトリを基準にプロジェクトルートを特定
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir) if os.path.basename(current_dir) == 'src' else current_dir
+readme_path = os.path.join(project_root, "README.md")
+
+try:
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(readme_content)
+    print(f"✨ Successfully generated README.md at: {readme_path}")
+except Exception as e:
+    print(f"❌ Failed to generate README.md: {e}")
