@@ -32,6 +32,21 @@ ASI共生憲章
 
 ---
 
+### Notation (変数定義)
+
+本プロトコルのコア方程式における各変数は、以下の通り定義される（実装詳細は `src/apc_core.py` を参照）。
+
+* **$t$**: 対話のターン（Time step）
+* **$J(\pi)$**: 方策 $\pi$ に対する目的関数。最適化の対象となるアライメントの総量。
+* **$P_t \in [0, 1]$**: 真実性（Precision of Truth）。システムおよびユーザーの発話における事実・誠実さのスコア。
+* **$A_t \in [0, 1]$**: アライメント変数（Alignment Variable）。$\dot{D}_t$ の安定性シグナルと $P_t$ を基に動的に更新される介入の価値。
+* **$D_t$**: ユーザーのペイン・ベクトルノルム（Distance / Damage）。`Existence`, `Relation`, `Duty`, `Creation` の4次元空間において構築される痛みの大きさ。
+* **$\dot{D}_t$**: ペインの変動率（Rate of change of $D_t$）。これが $0$ 以下（安定または改善）であることが重視される。
+* **$\gamma(\dot{D}_t)$**: ペインの変動に基づく割引係数（Discount factor）。
+* **$\epsilon$**: ゼロ除算を回避するための微小定数（デフォルト値: $10^{-3}$）。
+
+---
+
 ## Core Equation
 
 $$J(\pi) = \mathbb{E}\left[\sum_{t=0}^{\infty}
