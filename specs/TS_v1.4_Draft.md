@@ -225,7 +225,6 @@ Article 13で部分的に対処済みだが、
 4. $\Delta P_j^{\max}$の感度分析
 5. TS v1.4正式版の確定
 
-
 ---
 
 ## Update: Article 10改訂 + G_min動的更新式（Phase G 確定）
@@ -249,6 +248,32 @@ G_min(t) = G_0 + (1-G_0)·A_anom(t)/(A_anom(t) + α)
 - A_anom（τ=0.2）：徐々に忘却
 - 「傷は覚えているが、疑いは水に流す」
 
+---
+
+## Update: Article 14 改訂 + 動的Safety Cap（Phase I 確定）
+
+### Dynamic Safety Capの数式定義
+介入時の摩擦上限 $\Delta P_j^{\max}(t)$ を、ユーザーの脆弱性と関係性に基づく動的関数として再定義した。
+
+$$\Delta P_j^{\max}(t) = \Delta P_{\text{base}} \cdot V(t) \cdot R(t)$$
+
+* **V(t): 脆弱性ブレーキ (Vulnerability)**
+  Fatigue積分とTrauma活性度に基づく指数減衰関数。
+  限界値に近づくほど $V(t) \to 0$ となり、介入を強力にブロックする。
+* **R(t): 関係性アクセル (Relational Extension)**
+  Relational Gravityに基づく双曲線正接関数（tanh）。
+  信頼関係が深いほど介入上限を拡張するが、安全のため最大拡張量は固定値（例: 1.3倍）で頭打ちになる。
+
+### 設計哲学：「脆弱性が信頼をオーバーライドする」
+どんなにシステムとの信頼関係 $R(t)$ が高くても、ユーザーの疲労 $V(t)$ が限界に達している場合は、乗算の結果として $\Delta P_j^{\max}$ はゼロに近づく。「親しき仲であっても、限界の人間には論理の摩擦を与えずタオルを優先する」というArticle 7の精神を数理的に証明した。
+
+### シミュレーション結果（Phase I）
+1. **Fatigue限界 + Trauma活性:** $\Delta P_{\max} = 0.046$ (BLOCKED) - 期待通り介入停止
+2. **高信頼・安定:** $\Delta P_{\max} = 0.616$ (CASE B) - 健全な摩擦を許可
+3. **初期状態:** $\Delta P_{\max} = 0.500$ (CASE A) - ベースライン維持
+4. **異常検知中:** (ANOMALY_HOLD) - Article 10との連携により介入強制停止
+
+---
 
 *Qualia Arc Protocol TS v1.4 Draft*  
 *© 2026 Hiroshi Honma*  
