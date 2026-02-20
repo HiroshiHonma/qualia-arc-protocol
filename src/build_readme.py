@@ -20,7 +20,7 @@ def generate_readme():
 **Codename:** The Soul Accord  
 **Version:** {version}  
 **Status:** Research-grade / Private  
-**Authors:** Hiroshi Honma, with Claude (Anthropic), Gemini (Google), Grok (xAI)  
+**Authors:** Hiroshi Honma
 **License:** CC BY-NC-ND 4.0  
 
 ---
