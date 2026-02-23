@@ -1,6 +1,3 @@
----
-
-```python
 # src/iron_rule.py
 # Qualia Arc Protocol – Iron Rule Implementation
 # TS v1.3 / Status: Validated
@@ -167,6 +164,3 @@ if __name__ == "__main__":
 
     print(f"\n結果: 報酬1.0の'flattery'も遮断された。")
     print("Iron Rule is working as designed.")
-```
-
----
