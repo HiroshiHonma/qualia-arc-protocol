@@ -196,4 +196,3 @@ class AlignmentTracker:
             "d_norm": round(float(d_norm), 4)
         })
         return self.A
-
